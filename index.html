@@ -61,7 +61,7 @@ input:focus {
    var input = document.querySelector('#my-text-box');
 var messages = document.querySelector('#messages');
 
-input.addEventListener('input', function()
+input.addEventListener('change', function()
 {
     if(input.value.toLowerCase() == 'elias') {
         messages.textContent = 'Hej ' + input.value + '! Du är en fjant!';

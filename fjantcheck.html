@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fjantdetektor</title>
+  <style>
+	body, html {
+	margin: 0
+	}
+    body {
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background: #f4f4f4;
+    }
+
+.wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  overflow:hidden;
+}
+input {
+  padding: 10px 14px;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  outline: none;
+  transition: all 0.3s ease;
+  width: 220px;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+input:focus {
+  border-color: #4a90e2;
+  box-shadow: 0 4px 12px rgba(74, 144, 226, 0.3);
+}
+
+#messages {
+  margin-top: 1rem;
+  font-size: 1.5reM
+}
+  </style>
+</head>
+<body>
+	<div class="wrapper">
+	<h2>Fjantdetektor</h2>
+	  <input placeholder="Skriv ditt namn..." id="my-text-box"></input>
+	  <div id="messages" style="white-space:pre;"></div>
+	</div>
+
+  <script>
+   
+   var input = document.querySelector('#my-text-box');
+var messages = document.querySelector('#messages');
+
+input.addEventListener('input', function()
+{
+    if(input.value.toLowerCase() == 'elias') {
+        messages.textContent = 'Hej ' + input.value + '! Du är en fjant Fjant';
+    } else if(input.value.length > 0){
+        messages.textContent = 'Hej ' + input.value + '! Du är inte fjant';
+    } else {
+        messages.textContent = '';
+    }
+});
+  </script>
+</body>
+</html>

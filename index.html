@@ -64,9 +64,9 @@ var messages = document.querySelector('#messages');
 input.addEventListener('input', function()
 {
     if(input.value.toLowerCase() == 'elias') {
-        messages.textContent = 'Hej ' + input.value + '! Du är en fjant Fjant';
+        messages.textContent = 'Hej ' + input.value + '! Du är en fjant!';
     } else if(input.value.length > 0){
-        messages.textContent = 'Hej ' + input.value + '! Du är inte fjant';
+        messages.textContent = 'Hej ' + input.value + '! Du är inte fjant!';
     } else {
         messages.textContent = '';
     }

@@ -62,7 +62,7 @@ var messages = document.querySelector('#messages');
 
 input.addEventListener('change', function()
 {
-    if(input.value.toLowerCase() == 'elias') {
+    if(input.value.toLowerCase().includes('elias')) {
         messages.textContent = 'Hej ' + input.value + '! Du är en fjant!';
     } else if(input.value.length > 0){
         messages.textContent = 'Hej ' + input.value + '! Du är inte fjant!';
